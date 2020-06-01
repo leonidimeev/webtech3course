@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- Назначение DOCTYPE -->
+
+<!-- 
+Задание - сайт по дисциплине WEB - технологии с комментариями
+Выполнили студенты группы ПМ-17
+Имеев Леонид 
+Халыев Ньургун
+Тарабукин Иван -->
+
+<html lang="ru-RU" xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+<head>
+	<title>Расписание</title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+
+	<script type="text/javascript" src="js/clock.js"></script><!--  Скрипт - часы -->
+	<script type="text/javascript" src="js/tasks.js"></script>
+
+</head>
+
+<body onload="starttimer()" onunload="stoptimer()"> <!-- Таймер для движущейся картинки -->
+<div class="shell">
+	<div id="header">
+
+		<!-- Заголовок -->
+		<h1 id="logo"><a href="#">Сайт-задание по дисциплине<br /><span class="min"><span class="red">WEB - технологии</span></a></h1>
+
+		<!-- Навигация -->
+		<div id="navigation">
+			<ul>
+
+				<!-- При указании на элемент изменяет класс объекта на active - описано в style.css -->
+				<li><a href="index.html">Группа</a></li>
+				<li><a href="/">Навигация по VPS</a></li>
+				<li><a href="raspisanie.html">Расписание</a></li>
+				<li><a href="#">JS-Скрипты</a></li>
+
+			</ul>
+			<div class="cl">&nbsp;</div>
+		</div>
+
+	</div>
+	
+
+	<div id="main">
+
+		<div>
+			<h2>Движущаяся картинка</h2>
+			<div id="sidebar" class="right">
+			
+			</div>
+		</div>
+			<img id="moving_image" src="css/images/moving_image.jpeg" width="200" height="350">
+			<script>
+    			moving_image.onclick = function() {
+     			let start = Date.now();
+				let timer = setInterval(function() {
+        		let timePassed = Date.now() - start;
+				moving_image.style.left = timePassed / 5 + 'px';
+				if (timePassed > 3900) clearInterval(timer);
+				}, 20);	}
+ 			</script>
+			<div class="cl">&nbsp;</div>
+		</div>
+
+		<div>
+			<div class=all_page>
+ 				<div class=left_content_border>
+ 					<div class=left_content>
+ 						<h3>Замена картинки</h3>
+						<img id="changing_image" src="css/images/changing2.jpeg"
+						onmouseover="moveover()"
+						onmouseout="moveback()" width="300" height="400" />
+						<div class="cl">&nbsp;</div>
+ 					</div>
+ 				</div>
+ 				<div class=right_content_border>
+ 					<div class=right_content>
+ 						<h3>Увеличение картинки</h3>
+						<img id="bigger_image" src="css/images/bigger.jpeg"
+						onmouseover="moveoverbigger()"
+						onmouseout="movebackbigger()"
+						width="200" height="300" />
+ 					</div>
+ 				</div>
+ 			</div>
+ 		</div>
+ 		<div class="cl">&nbsp;</div>
+ 		<div>
+ 			<div class=all_page>
+ 				<div class=left_content_border>
+ 					<div class=left_content>
+ 						
+ 					</div>
+ 				</div>
+ 				<div class=right_content_border>
+ 					<div class=right_content>
+ 					</div>
+ 				</div>
+ 			</div>
+ 		</div>
+ 		<div class="cl">&nbsp;</div>
+
+	</div>
+	
+	<div id="footer">
+		<div class="nav left">
+			orem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem lorem lorem lorem lor Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+		</div>
+
+		<p class="copy right">© ПМ17 2020</p>
+		<div class="cl">&nbsp;</div>
+	</div>
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ru-RU">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <title>Расписание (раскрывающееся меню)</title>
+  <link rel="stylesheet" type="text/css" media="all" href="styleraspisanie.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript">
+$(document).ready(function(){
+  $('a').on('click', function(e){
+    e.preventDefault();
+  });
+    
+  $('#ddmenu li').hover(function () {
+     clearTimeout($.data(this,'timer'));
+     $('ul',this).stop(true,true).slideDown(200);
+  }, function () {
+    $.data(this,'timer', setTimeout($.proxy(function() {
+      $('ul',this).stop(true,true).slideUp(200);
+    }, this), 100));
+  });
+
+});
+</script>
+</head>
+
+<nav>
+      <ul id="ddmenu">
+        <li><a href="index.html">Назад на главный сайт</a></li>
+        <li><a href="#">Понедельник</a>
+          <ul>
+            <li><a href="#">-</a></li>
+            <li><a href="#">ИОМО</a></li>
+            <li><a href="#">ИОМО</a></li>
+            <li><a href="#">Численные методы</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Вторник</a>
+          <ul>
+            <li><a href="#">Физика</a></li>
+            <li><a href="#">Физика</a></li>
+            <li><a href="#">Уравнения математической физики</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Среда</a>
+          <ul>
+            <li><a href="#">Физкультура</a></li>
+            <li><a href="#">Теория вероятностей и мат. статистика</a></li>
+            <li><a href="#">Теория вероятностей и мат. статистика</a></li>
+            <li><a href="#">Системы программирования</a></li>
+            <li><a href="#">Системы программирования</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Четверг</a>
+          <ul>
+            <li><a href="#">Функциональный анализ</a></li>
+            <li><a href="#">Функциональный анализ</a></li>
+            <li><a href="#">Численные методы</a></li>
+            <li><a href="#">Численные методы</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Пятница</a>
+          <ul>
+            <li><a href="#">-</a></li>
+            <li><a href="#">-</a></li>
+            <li><a href="#">-</a></li>
+            <li><a href="#">Уравнения математической физики</a></li>
+            <li><a href="#">Web-технологии</a></li>
+			<li><a href="#">Web-технологии</a></li>          
+		  </ul>
+        </li>
+        <li><a href="#">Суббота</a>
+          <ul>
+            <li><a href="#">Физкультура</a></li>
+            <li><a href="#">Метод конечных элементов</a></li>
+            <li><a href="#">Метод конечных элементов</a></li>
+          </ul>
+        </li>
+        
+      </ul>
+    </nav>

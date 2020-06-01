@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="ru-RU" xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+<head>
+	<title>ПМ-17</title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+
+	<!-- Подключение плагина jCarousel -->
+	<link rel="stylesheet" href="css/jquery.jcarousel.css" type="text/css" media="all" />
+
+	<!--[if IE 6]>
+		<link rel="stylesheet" href="css/ie6.css" type="text/css" media="all" />
+	<![endif]-->
+	<link rel="shortcut icon" type="image/x-icon" href="css/images/favicon.ico" />
+
+	<!-- Подключение плагина jCarousel -->
+	<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
+	<script type="text/javascript" src="js/func.js"></script>
+
+	<script type="text/javascript" src="js/clock.js"></script><!--  Скрипт - часы -->
+	<script type="text/javascript" src="js/tasks.js"></script>
+
+</head>
+
+<body>
+<div class="shell">
+	<div id="header">
+
+		<!-- Заголовок -->
+		<h1 id="logo"><a href="#">Сайт-задание по дисциплине<br /><span class="min"><span class="red">WEB - технологии</span></a></h1>
+
+		<!-- Навигация -->
+		<div id="navigation">
+			<ul>
+
+				<!-- При указании на элемент изменяет класс объекта на active - описано в style.css -->
+				<li><a href="#">Группа</a></li>
+				<li><a href="../html">Навигация по VPS</a></li>
+				<li><a href="raspisanie.html">Расписание</a></li>
+				<li><a href="scriptpage.html">JS-Скрипты</a></li>
+
+			</ul>
+			<div class="cl">&nbsp;</div>
+		</div>
+
+	</div>
+	
+	<!-- Кнопки слайдера -->
+	<div class="slider-holder">
+		<a href="#" class="prev notext">prev</a>
+		<a href="#" class="next notext">next</a>
+
+		<!-- Базовая разметка слайдера jCarousel -->
+		<div class="slider">
+			<ul>
+			    <li><img src="css/images/1.jpeg" alt="" /></li>
+			    <li><img src="css/images/2.jpeg" alt="" /></li>
+			    <li><img src="css/images/7.jpeg" alt="" /></li>
+			</ul>
+		</div>
+
+	</div>
+	
+	<div id="main">
+		<div id="content" class="left">
+			<div class="head">
+				<h2>Добро пожаловать</h2>
+				<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem lorem lorem lorem lor Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem lorem lorem lorem lor</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem lorem lorem lorem lor Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem lorem lorem lorem lor Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem lorem lorem lorem lor Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem lorem lorem lorem lor</p>
+			</div>
+			<div class="col left">
+				<h2>Название колонки</h2>
+				<div class=left_content_border>
+ 					<div class=left_content>
+						<!-- <img id="changing_image" src="css/images/changing2.jpeg"
+						onmouseover="moveover()"
+						onmouseout="moveback()" width="300" height="400" /> -->
+ 					</div>
+ 					<div class="cl">&nbsp;</div>
+ 					<div>
+ 						<h4>Увеличить прозрачность картинки</h4>
+						<img id="transparent_image" src="css/images/changing2.jpeg"
+						onmouseover="moveoveropacityandwritemsg()"
+						onmouseout="movebackopacityandwritemsg()" width="300" height="400" />
+						<form>
+						<input id="msgfield" size="53">
+						</form>
+						<div class="cl">&nbsp;</div>
+ 					</div>
+ 				</div>
+			</div>
+			<div class="col right">
+				<h2>Взорви кота</h2>
+					<img src = "css/images/tenor.gif" width = "250" height ="250">
+			</div>
+			<div class="cl">&nbsp;</div>
+		</div>
+		
+		<div id="sidebar" class="right">
+
+			<h3>Системное время</h3>
+			<p><SCRIPT> writeDate(); </SCRIPT> </p>
+			<p><SCRIPT> writeTime(); </SCRIPT> </p>
+
+			<h2>Авторизация на сайте</h2>
+			<div class="item">
+				<form name="check_user_form">
+				<p id="message" >Пожалуйста, заполните все поля формы!</p> 
+				<h3>e-mail (включает @):</h3><input type="text" id="email"><br /> 
+				<h3>phone number (только числа):</h3><input type="text" id="phone"><br />
+				<h3>password:</h3><input type="text" id="password_input_box"><br />
+				<br />
+				<input type="button" id ="explosion_cat_button" value="Проверить введенные данные"><br />
+				</form>
+			</div>
+
+			<h2>Последние новости</h2>
+			<div class="item">
+				<span class="date">1 Июня 2020</span>
+				<h3>Сайт готов для сдачи</h3>
+				<p>Хоть сайт совсем сырой, было решено сдать в таком виде, вприницпе сайт соответствует требованиям</p>
+			</div>
+			<div class="item">
+				<span class="date">28 Мая 2020</span>
+				<h3>Много работы проделано, осталось столько же</h3>
+				<p>Наконец, сайт готов к работе</p>
+			</div>
+			<div class="item">
+				<span class="date">25 Мая 2020</span>
+				<h3>День икс все ближе</h3>
+				<p>Многие только начинают писать курсовую работу, кто-то даже еще не выбрал тему</p>
+			</div>
+			<div class="item">
+				<span class="date">20 Мая 2020</span>
+				<h3>О сессии</h3>
+				<p>Скоро будет сессия, надеюсь она хорошо пройдет отлично</p>
+			</div>
+
+			
+		</div>
+		<div class="cl">&nbsp;</div>
+	</div>
+	
+	<div id="footer">
+		<div class="nav left">
+			<script src="https://apps.elfsight.com/p/platform.js" defer></script>
+			<div class="elfsight-app-99504792-fa3f-448f-8714-7de662608c92"></div>
+			orem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem lorem lorem lorem lor Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+		</div>
+
+		<p class="copy right">© ПМ17 2020</p>
+		<div class="cl">&nbsp;</div>
+	</div>
+</div>
+</body>
+</html>
